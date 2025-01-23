@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradyumna Rajbhandari</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/c6a0cef992.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <nav>
+                <div class="container">
+                    <div class="logo">
+                        <a href="#header"><img src="images/logo.png" alt="Logo"></a>
+                    </div>
+                    <div class="navtext">
+                        <input type="checkbox" name = "checkbox" id = "check">
+                        <label for="check" class = "checkbtn">
+                            <i class = "fas fa-bars"></i>
+                        </label>
+                        <ul>
+                            <li><a href="#header" class = "navactive">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="title">
+            <p class = "red">A Learning Intern</p>
+            <h1>Hi, I'm <span class = "red">Pradyumna</span><br> From Nepal</h1>
+        </div>
+        <div id="about">
+            <div class="container2">
+                <div class="row">
+                    <div class="left">
+                        <img src="images/user.jpg">
+                    </div>
+                    <div class="right">
+                        <h1 class = "red">About Me</h1>
+                        <p>Motivated and detail-oriented Computer Science and Information Technology undergraduate with a strong foundation in programming and web development. Seeking an internship opportunity to apply my technical skills in developing innovative solutions, enhance my understanding of real-world applications, and contribute to impactful projects in a collaborative environment.</p>
+                        
+                        <div class="tab">
+                            <p class="links activelink" onclick="opentab('skills')">Skills</p>
+                            <p class="links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="contents activecontent" id="skills">
+                            <ul>
+                                <li><span>React</span><br>Designing Web Interfaces</li>
+                                <li><span>Django</span><br>Backend</li>
+                                <li><span>HTML CSS JS</span><br>Basic Knowledge</li>
+                            </ul>
+                        </div>
+                        <div class="contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>BSc CSIT Prime College, Kathmandu</li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="services">
+            <div class="box">
+                <h1 class="red">Services</h1>
+                <div class="services">
+                    <div class="servicelist">
+                        <div class = "card">
+                            <i class="fa-solid fa-web-awesome"></i>
+                            <h2 class = "red">Web Design</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ipsum, nam sit eaque autem reiciendis ipsa maxime voluptas asperiores esse explicabo quos veniam qui placeat rerum consequuntur itaque suscipit, ducimus saepe odio cupiditate ullam omnis eius deserunt. Alias, consectetur odit.</p>
+                        </div>
+                        <div class = "card">
+                            <i class="fa-solid fa-database"></i>
+                            <h2 class = "red">Django</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ipsum, nam sit eaque autem reiciendis ipsa maxime voluptas asperiores esse explicabo quos veniam qui placeat rerum consequuntur itaque suscipit, ducimus saepe odio cupiditate ullam omnis eius deserunt. Alias, consectetur odit.</p>
+                        </div>
+                        <div class = "card">
+                            <i class="fa-solid fa-chalkboard"></i>
+                            <h2 class = "red">React</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, ipsum, nam sit eaque autem reiciendis ipsa maxime voluptas asperiores esse explicabo quos veniam qui placeat rerum consequuntur itaque suscipit, ducimus saepe odio cupiditate ullam omnis eius deserunt. Alias, consectetur odit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="inside">
+                <div class="table">
+                    <div class="col1">
+                        <h1 class = "red">Contact Us</h1>
+                        <p><i class="fa-solid fa-magnifying-glass"></i>pradyumnarajbhandari1@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>9808270609</p>
+                        <div class="socials">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="col2">
+                        <form method="POST" name = "submit-to-google-sheet">
+                            <input type="text" name = "Name" placeholder="Your Name" required>
+                            <input type="text" name = "Email" placeholder = "Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type = "submit" class = "btn">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="logo images">
+
+                <a href="#header"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <p>&copy Copywrited to Pradyumna</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbyyDDNCsMiLOmF70IPwTFUbXMp6sfR5PVAjChM8Xj51txotJ2eLUlVp4g7uSVH0_I4a/exec>'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

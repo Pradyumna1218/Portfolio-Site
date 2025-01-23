@@ -1,0 +1,396 @@
+:root{
+    --background: #1a1a2e;
+    --text-color: #fff;
+    --nav-text: #fff;
+    --red: #ff7997;
+    --card-color:linear-gradient(90deg, #2a2a3e, #1a1a2e);;
+    --form-color: linear-gradient(90deg, #2a2a3e, #2a2a3e);;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--background);
+    color: white;
+    overflow-x: hidden;
+    
+}
+.red{
+    color: var(--red)
+}
+
+
+
+nav{
+    width: 100%;
+    height: 15vh;
+    
+}
+.container{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: inline-flex;
+}
+
+.logo img{
+    width: 210px;
+    height: 35px;
+    margin: 0px 0px 0px 30px;
+}
+
+.navtext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 100px 0px 0px;
+}
+.navtext ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navtext ul li{
+    padding: 20px;
+    
+}
+.navtext ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--nav-text);
+    position: relative;
+}
+
+
+a.navactive{
+    background: var(--background);
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--red );
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+.navtext ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--red);
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.navtext ul li a:hover::after{
+    width: 100%;
+}
+
+.title{
+    
+    background-image: url("images/background.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    margin: 35px 28px;
+    width: 100%;
+    height: 100vh;
+}
+.title h1{
+    margin-top: 15px;
+}
+.titile h1 span{
+    color: var(--red)
+}
+.titile h1, .title p{
+    margin-top: 20px;
+}
+#about{
+    /* padding: 20px 0px; */
+    margin: 35px 28px;  
+}
+.row{
+    display: flex;  
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.left{
+    flex-basis: 35%;
+}
+.left img{
+    width: 100%;
+    border-radius: 15px;
+}
+.right{
+    flex-basis: 60%;
+}
+.right h1{
+    font-size: 60px;
+    margin-bottom: 20px;;
+}
+
+.tab{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5px;
+}
+.links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--red);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+.links.activelink::after{
+    width: 50%;
+}
+
+.contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.contents ul li span{
+    color: var(--red);
+}
+.contents{
+    display: none;
+}
+.contents.activecontent{
+    display: block;
+}
+#services{
+    padding: 80px 0px;
+    margin: 35px 28px;
+}
+.box h1{
+    font-size: 60px;
+    
+}
+.servicelist{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 15px 10px 0px 50px;
+}
+.card{
+    margin-right: 90px;
+    background: var(--card-color);
+    /* height: 200px; */
+    padding: 30px;
+    transition: 0.5s;
+    box-shadow: 10px 15px 30px rgba(30, 30, 200, 0.3);
+
+}
+.card i{
+    margin-bottom: 8px;
+}
+.card h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.card:hover{
+    background: 10px 25px 30px rgba(30, 30, 200, 0.3);
+    transform: translateY(-10px);
+}
+#contact{
+    padding: 80px 0px;
+    margin: 35px 28px;  
+}
+.table h1{
+    font-size: 60px;
+}
+.table {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.col1 h1{
+    margin-bottom: 20px;
+}
+.col1 p{
+    margin-bottom: 16px;
+}
+.col1 p i{
+    margin-right: 10px;
+    color: var(--red);
+}
+.socials{
+    margin: 20px;
+}
+.socials i{
+    font-size: 25px;
+    margin-right: 10px;
+    color: var(--red);
+    transition: 0.5s;
+}
+.socials i:hover{
+    color: var(--text-color );
+    transform: translateY(-5px);
+}
+.col2 form{
+    width: 100%;
+}
+
+
+form input,form textarea{
+    width: 100%;
+    border: 0px;
+    outline: none;
+    background: var(--form-color);
+    padding: 15px;
+    margin: 15px 0;
+    color: var(--text-color);
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
+.btn{
+    border-radius: 8px;
+    padding: 10px;
+    position: center;
+    cursor: pointer;
+    background: var(--red);
+    border: 0px solid var(--red);
+    color: var(--text-color);
+    width: 100%;
+
+}
+
+.footer{
+    border-top: 2px solid var(--red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+}
+.footer p{
+    color: var(--red);
+    
+    margin-right: 50px;
+}
+.images{
+    margin-top: 18px;
+}
+
+@media only screen and (max-width: 900px) {
+    h1{
+        font-size: 30px;
+    }
+    .logo img{
+        width: 150px;
+        height: 20px;
+        margin: 0px 0px 0px 30px;
+    }
+    
+    .navtext ul{
+        display: block;
+    }
+    .navtext ul li {
+        font-size: 16px; 
+    }
+    .checkbtn{
+        display: block;
+    }
+    .navtext ul{
+        position:fixed;
+        width: 100%;
+        height: calc(100vh - 15vh);
+        background: var(--background);
+        top: 15vh;
+        left: -100%;
+        text-align: center;
+        transition: left .5s ease;
+    }
+    .navtext ul li{
+        display: block;
+    }
+    .navtext ul li {
+        font-size: 16px;
+        
+    }
+    a.navactive{
+        background: none;
+        color: var(--background)
+    }
+    #check:checked ~ul{
+        left: 0;           
+    }
+    .title {
+        background-image: url('');
+        background-size: cover; 
+        height: auto; 
+    }
+
+    .right h1 {
+        font-size: 28px; 
+    }
+    .servicelist {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+
+    .table{
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .col1, .col2 {
+        flex-basis: 100%; 
+        text-align: center; 
+    }
+
+    .col1 p, .socials {
+        justify-content: center; 
+    }
+    
+    .socials i {
+        font-size: 20px; 
+    }
+
+    form input, form textarea {
+        width: 100%; 
+    }
+
+    form .btn {
+        width: 100%; 
+        text-align: center;
+    }
+    
+
+}
